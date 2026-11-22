@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Attendance Graph</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+    <h1>Attendance Statistics</h1>
+
+    <canvas id="attendanceChart"></canvas>
+
+    <script>
+
+
+        new Chart(
+            document.getElementById('attendanceChart'),
+            {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Attendance Count',
+                        data: values,
+                        backgroundColor: [
+                            'red',
+                            'blue',
+                            'green',
+                            'orange',
+                            'purple',
+                            'cyan',
+                            'yellow'
+                        ]
+                    }]
+                },
+
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            }
+        );
+
+    </script>
+
+    <br>
+
+    <a href="/">Back</a>
+
+</body>
+
+</html>
